@@ -1,0 +1,331 @@
+
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>South Travel and Tours</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-gray-800">
+  <!-- Navbar -->
+<header class="bg-white shadow-md fixed w-full z-20">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    
+    <!-- Logo -->
+    <a href="/" class="inline-block" aria-label="South Travel & Tours">
+      <img src="logo.png" 
+           alt="South Travel & Tours Logo" 
+           class="max-w-[180px] sm:max-w-[140px] h-auto block">
+    </a>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="#home" class="text-gray-700 hover:text-indigo-600">Home</a>
+      <a href="#about" class="text-gray-700 hover:text-indigo-600">About</a>
+      <a href="#services" class="text-gray-700 hover:text-indigo-600">Services</a>
+      <a href="#packages" class="text-gray-700 hover:text-indigo-600">Packages</a>
+      <a href="picture.html" class="text-gray-700 hover:text-indigo-600">Our Clients</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+  </div>
+
+  <!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-white shadow-md flex flex-col">
+  <a href="#home" class="px-4 py-2 text-gray-700 hover:text-indigo-600">Home</a>
+  <a href="#about" class="px-4 py-2 text-gray-700 hover:text-indigo-600">About</a>
+  <a href="#services" class="px-4 py-2 text-gray-700 hover:text-indigo-600">Services</a>
+  <a href="#packages" class="px-4 py-2 text-gray-700 hover:text-indigo-600">Packages</a>
+  <a href="picture.html" class="px-4 py-2 text-gray-700 hover:text-indigo-600">Our Clients</a>
+</div>
+
+</header>
+
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen relative flex items-center justify-center text-center overflow-hidden pt-16">
+    <div id="slider" class="absolute inset-0">
+      <img src="kabah.png" class="w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 opacity-100">
+      <img src="madina.png" class="w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 opacity-0">
+      <img src="arfat.png" class="w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 opacity-0">
+    </div>
+    <div class="relative z-10 bg-black bg-opacity-50 p-6 rounded-lg mx-4 md:mx-0">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Welcome to South Travel & Tours</h2>
+      <p class="text-base md:text-lg text-gray-200 mb-6">Your trusted partner for Hajj, Umrah, and worldwide tours</p>
+      <a href="#packages" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700">Explore Packages</a>
+    </div>
+  </section>
+
+  <script>
+    const slides = document.querySelectorAll('#slider img');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('opacity-100');
+      slides[current].classList.add('opacity-0');
+      current = (current + 1) % slides.length;
+      slides[current].classList.remove('opacity-0');
+      slides[current].classList.add('opacity-100');
+    }, 4000);
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 container mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center text-indigo-600 mb-6">About Us</h3>
+    <p class="text-center max-w-2xl mx-auto text-gray-600">
+      At South Travel & Tours, we provide exceptional Hajj, Umrah, and global travel services with comfort and reliability. 
+      Our mission is to make your sacred journey peaceful and memorable with top-class arrangements.
+    </p>
+  </section>
+
+<!-- Services Section -->
+<section id="services" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center text-indigo-600 mb-12">Our Services</h3>
+    <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
+
+      <!-- Service 1 -->
+      <div class="p-6 bg-white shadow-lg rounded-xl hover:shadow-2xl transition-shadow">
+        <h4 class="text-xl font-semibold mb-2 text-indigo-600">Umrah Packages</h4>
+        <p class="text-gray-600">Affordable and luxury Umrah packages with complete arrangements.</p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="p-6 bg-white shadow-lg rounded-xl hover:shadow-2xl transition-shadow">
+        <h4 class="text-xl font-semibold mb-2 text-indigo-600">Hajj Packages</h4>
+        <p class="text-gray-600">Guided Hajj tours ensuring comfort, safety, and spiritual focus.</p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="p-6 bg-white shadow-lg rounded-xl hover:shadow-2xl transition-shadow">
+        <h4 class="text-xl font-semibold mb-2 text-indigo-600">Travel & Tours</h4>
+        <p class="text-gray-600">Explore worldwide destinations with our curated travel packages.</p>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="p-6 bg-white shadow-lg rounded-xl hover:shadow-2xl transition-shadow">
+        <h4 class="text-xl font-semibold mb-2 text-indigo-600">Transport</h4>
+        <p class="text-gray-600">Comfortable and reliable transport for your entire journey.</p>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="p-6 bg-white shadow-lg rounded-xl hover:shadow-2xl transition-shadow">
+        <h4 class="text-xl font-semibold mb-2 text-indigo-600">Visa Assistance</h4>
+        <p class="text-gray-600">Complete visa processing and guidance for hassle-free travel.</p>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="p-6 bg-white shadow-lg rounded-xl hover:shadow-2xl transition-shadow">
+        <h4 class="text-xl font-semibold mb-2 text-indigo-600">Hotel Booking</h4>
+        <p class="text-gray-600">Best hotels near Haram & Masjid-e-Nabwi with all facilities.</p>
+      </div>
+
+      <!-- Service 7 -->
+      <div class="p-6 bg-white shadow-lg rounded-xl hover:shadow-2xl transition-shadow">
+        <h4 class="text-xl font-semibold mb-2 text-indigo-600">Ziarat Tours</h4>
+        <p class="text-gray-600">Special guided tours to holy sites in Makkah and Madinah.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Packages Section -->
+<section id="packages" class="text-gray-600 body-font">
+  <div class="container px-5 py-12 mx-auto">
+    <div class="flex flex-col text-center w-full mb-10">
+      <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-indigo-600">
+        Hajj & Umrah Packages
+      </h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
+        Choose the best package for your journey with comfortable hotels and flexible room options.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap -m-4">
+      <!-- Package Card 1 -->
+      <div class="p-4 md:w-1/2 w-full">
+        <div class="h-full p-6 rounded-xl shadow-lg border border-gray-200 bg-white flex flex-col transition-transform transform hover:-translate-y-1 hover:shadow-2xl">
+          
+          <h2 class="text-sm tracking-widest text-indigo-500 mb-2 font-semibold uppercase">
+            Flight Option: 1 Sep ISB → JED | 15 Sep JED → ISB
+          </h2>
+          
+          <h1 class="text-2xl font-bold text-gray-900 pb-3 mb-3 border-b border-gray-200">
+            15 Days Umrah Package
+          </h1>
+
+          <p class="mb-2 text-gray-700 font-semibold">
+            🕋 Makkah Hotel: <span class="font-medium">Masarat Silver (650m from Haram)</span>
+          </p>
+          <p class="mb-4 text-gray-700 font-semibold">
+            🌙 Madinah Hotel: <span class="font-medium">Burj Mow Addah (400m from Masjid-e-Nabwi)</span>
+          </p>
+
+          <!-- Prices -->
+          <div class="space-y-1 text-sm">
+            <p class="flex justify-between items-center text-gray-700">
+              <span></span>
+              <span class="font-semibold text-indigo-600">Starting From</span>
+            </p>
+
+            <p class="flex justify-between items-center text-gray-700">
+              <span>✔ Sharing Room</span>
+              <span class="font-semibold text-indigo-600">258,000 PKR</span>
+            </p>
+            <p class="flex justify-between items-center text-gray-700">
+              <span>✔ Quad Bed Room</span>
+              <span class="font-semibold text-indigo-600">261,000 PKR</span>
+            </p>
+            <p class="flex justify-between items-center text-gray-700">
+              <span>✔ Triple Bed Room</span>
+              <span class="font-semibold text-indigo-600">277,000 PKR</span>
+            </p>
+            <p class="flex justify-between items-center text-gray-700">
+              <span>✔ Double Bed Room</span>
+              <span class="font-semibold text-indigo-600">310,000 PKR</span>
+            </p>
+          </div>
+
+          <!-- CTA Button -->
+         <!-- CTA Button -->
+<a href="https://wa.me/923335238595" target="_blank"
+   class="bg-indigo-600 text-white py-2.5 px-6 rounded-lg font-semibold hover:bg-indigo-700 w-full mt-5 transition-colors shadow-md text-sm text-center block">
+  Book Now
+</a>
+
+        </div>
+      </div>
+
+      <!-- Package Card 2 -->
+      <div class="p-4 md:w-1/2 w-full">
+        <div class="h-full p-6 rounded-xl shadow-lg border border-gray-200 bg-white flex flex-col transition-transform transform hover:-translate-y-1 hover:shadow-2xl">
+          
+          <h2 class="text-sm tracking-widest text-indigo-500 mb-2 font-semibold uppercase">
+            Flight Option: 2 Sep ISB → JED | 26 Sep JED → ISB
+          </h2>
+          
+          <h1 class="text-2xl font-bold text-gray-900 pb-3 mb-3 border-b border-gray-200">
+            21 Days Umrah Package
+          </h1>
+
+          <p class="mb-2 text-gray-700 font-semibold">
+            🕋 Makkah Hotel: <span class="font-medium">Talal Mashad (750m from Haram)</span>
+          </p>
+          <p class="mb-4 text-gray-700 font-semibold">
+            🌙 Madinah Hotel: <span class="font-medium">Diyar Al Hijaz (850m from Masjid-e-Nabwi)</span>
+          </p>
+
+          <!-- Prices -->
+          <div class="space-y-1 text-sm">
+             <p class="flex justify-between items-center text-gray-700">
+              <span> </span>
+              <span class="font-semibold text-indigo-600">Starting From</span>
+            </p>
+            <p class="flex justify-between items-center text-gray-700">
+              <span>✔ Sharing Room</span>
+              <span class="font-semibold text-indigo-600">265,000 PKR</span>
+            </p>
+            <p class="flex justify-between items-center text-gray-700">
+              <span>✔ Quad Bed Room</span>
+              <span class="font-semibold text-indigo-600">268,000 PKR</span>
+            </p>
+            <p class="flex justify-between items-center text-gray-700">
+              <span>✔ Triple Bed Room</span>
+              <span class="font-semibold text-indigo-600">286,000 PKR</span>
+            </p>
+            <p class="flex justify-between items-center text-gray-700">
+              <span>✔ Double Bed Room</span>
+              <span class="font-semibold text-indigo-600">321,000 PKR</span>
+            </p>
+          </div>
+
+          <!-- CTA Button -->
+         <!-- CTA Button -->
+<a href="https://wa.me/923335238595" target="_blank"
+   class="bg-indigo-600 text-white py-2.5 px-6 rounded-lg font-semibold hover:bg-indigo-700 w-full mt-5 transition-colors shadow-md text-sm text-center block">
+  Book Now
+</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section class="text-gray-700 body-font relative bg-gray-50">
+    <div class="container px-5 py-24 mx-auto flex flex-col md:flex-row">
+      <div class="md:w-2/3 w-full bg-gray-300 rounded-lg overflow-hidden mb-8 md:mb-0 relative">
+        <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="Kohat Map" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=Gilani%20Market%20Main%20Bazar%20Kohat&ie=UTF8&t=&z=14&iwloc=B&output=embed" style="filter: grayscale(0.7) contrast(1.2) opacity(0.6);"></iframe>
+      </div>
+      <div class="md:w-1/3 w-full md:ml-8 bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-indigo-600 text-2xl mb-4 font-bold title-font">Send Us Feedback</h2>
+        <form>
+          <input class="w-full bg-gray-100 rounded border border-gray-300 mb-4 py-2 px-4 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200" placeholder="Name" />
+          <input type="email" class="w-full bg-gray-100 rounded border border-gray-300 mb-4 py-2 px-4 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200" placeholder="Email" />
+          <textarea class="w-full bg-gray-100 rounded border border-gray-300 mb-4 py-2 px-4 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 resize-none" placeholder="Message"></textarea>
+          <form action="gamingperacha@gmail.com" method="POST" enctype="text/plain">
+  <textarea name="feedback" placeholder="Write your feedback here..." 
+    class="w-full border rounded-lg p-3 mb-4"></textarea>
+  
+  <button type="submit" 
+    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded font-semibold">
+    Submit
+  </button>
+</form>
+
+        </form>
+      </div>
+    </div>
+  </section>
+<!-- Footer -->
+<footer class="bg-white border-t text-gray-700 body-font">
+  <div class="container px-5 py-10 mx-auto flex flex-col items-center">
+    
+    <!-- Logo -->
+    <a href="/" class="mb-4">
+      <img src="logo1.png" alt="South Travel & Tours Logo" class="w-40 h-auto mx-auto">
+    </a>
+
+    <!-- Tagline -->
+    <p class="text-sm text-gray-600 text-center max-w-md mb-6">
+      Specializing in Hajj & Umrah travel packages with comfort & trust.
+    </p>
+
+    <!-- Social Icons -->
+    <div class="flex space-x-8 mb-6">
+     <!-- Facebook -->
+<a href="https://www.facebook.com/share/172EgPy2Rx/" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4H14V7a1 1 0 0 1 1-1h3z"/>
+  </svg>
+</a>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/923335238595?text=Assalamualaikum%20South%20Travel%20%26%20Tours%2C%20I%20want%20to%20book%20an%20Umrah%20package." 
+         target="_blank" 
+         class="text-gray-500 hover:text-green-600 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path d="M16.72 13.06c-.22-.11-1.29-.63-1.49-.7s-.35-.11-.49.11-.56.7-.69.84-.25.17-.47.06a6.39 6.39 0 0 1-1.87-1.16 7.06 7.06 0 0 1-1.31-1.62c-.14-.25 0-.38.1-.5s.22-.25.33-.38.14-.25.21-.41.04-.31-.02-.43-.49-1.18-.67-1.61-.36-.35-.49-.36-.27-.01-.41-.01a.79.79 0 0 0-.56.27c-.19.2-.74.72-.74 1.77s.76 2.06.87 2.2c.11.14 1.49 2.28 3.63 3.2.51.22.91.35 1.22.45.51.16.97.14 1.34.09.41-.06 1.29-.53 1.47-1.04s.18-.95.13-1.04-.2-.15-.42-.26z"/>
+          <path d="M20.52 3.48A11.94 11.94 0 0 0 3.48 20.52l-1.2 4.38 4.47-1.17a11.94 11.94 0 0 0 13.77-2.28 11.94 11.94 0 0 0 0-16.97z"/>
+        </svg>
+      </a>
+    </div>
+
+   
+  </div>
+</footer>
+
+</body>
+</html>
